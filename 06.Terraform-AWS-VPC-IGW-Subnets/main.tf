@@ -17,7 +17,7 @@ resource "aws_internet_gateway" "this" {
     var.common_tags,
     var.igw_tags,
     {
-      Name = locals.resource_name
+      Name = local.resource_name
     }
   )
 }
@@ -30,7 +30,7 @@ resource "aws_subnet" "public" {
     var.common_tags,
     var.public_subnet_cidr_tags,
     {
-      Name = locals.az_names[count.index]
+      Name = local.az_names[count.index]
     }
   )
 }
