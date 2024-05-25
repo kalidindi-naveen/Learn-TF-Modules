@@ -65,6 +65,22 @@ variable "database_subnet_cidr_tags" {
   type    = map(any)
   default = {}
 }
+
+variable "public_route_table_tags" {
+  type    = map(any)
+  default = {}
+}
+
+variable "private_route_table_tags" {
+  type    = map(any)
+  default = {}
+}
+
+variable "database_route_table_tags" {
+  type    = map(any)
+  default = {}
+}
+
 ### IGW
 variable "igw_tags" {
   type    = map(any)
