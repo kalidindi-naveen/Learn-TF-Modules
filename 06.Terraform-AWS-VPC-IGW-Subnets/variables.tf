@@ -39,6 +39,32 @@ variable "public_subnet_cidr_tags" {
   type    = map(any)
   default = {}
 }
+
+variable "private_subnet_cidrs" {
+  type = list(string)
+  validation {
+    condition     = length(var.private_subnet_cidrs) == 2
+    error_message = "Please Provide 2 Subnets CIDR's Only"
+  }
+}
+
+variable "private_subnet_cidr_tags" {
+  type    = map(any)
+  default = {}
+}
+
+variable "database_subnet_cidrs" {
+  type = list(string)
+  validation {
+    condition     = length(var.database_subnet_cidrs) == 2
+    error_message = "Please Provide 2 Subnets CIDR's Only"
+  }
+}
+
+variable "database_subnet_cidr_tags" {
+  type    = map(any)
+  default = {}
+}
 ### IGW
 variable "igw_tags" {
   type    = map(any)

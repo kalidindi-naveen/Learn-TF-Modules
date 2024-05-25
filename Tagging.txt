@@ -10,3 +10,14 @@ common_tags
 Terraform=true
 Project=
 Environment=dev/prod
+
+Subnets
+-------
+expense-dev-public-us-east-1a
+expense-dev-public-us-east-1b
+
+expense-dev-private-us-east-1a
+expense-dev-private-us-east-1b
+
+expense-dev-database-us-east-1a
+expense-dev-database-us-east-1b
