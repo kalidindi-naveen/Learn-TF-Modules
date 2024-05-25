@@ -1,0 +1,15 @@
+VPC peering
+-----------
+By default, no 2 vpc's connect each other
+
+peering will establish a connection between 2 vpc's
+
+Note: 
+- CIDR Should not be same
+- A wants to connect to B --> A: requester, B: Acceptor
+- VPC's can be in
+            - either same region of same account
+            - either different region of same account
+            - either same region of different account
+            - either different region of different account
+- Routes should be added to subnets
