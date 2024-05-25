@@ -114,5 +114,5 @@ resource "aws_nat_gateway" "this" {
       Name = "${local.resource_name}"
     }
   )
-  depends_on = [ aws_internet_gateway.this ]
+  depends_on = [aws_internet_gateway.this]
 }
