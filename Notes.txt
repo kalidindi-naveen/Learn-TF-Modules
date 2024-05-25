@@ -1,0 +1,6 @@
+Advantages of Modules
+---------------------
+- code reuse
+- best practices can be implemented & force users to use
+- easy to maintain/update
+- few restrictions based on company guidelines

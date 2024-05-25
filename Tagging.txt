@@ -1,0 +1,12 @@
+Tagging Strategy
+----------------
+
+expense-dev
+
+<project_name>-<environment>
+
+common_tags
+-----------
+Terraform=true
+Project=
+Environment=dev/prod

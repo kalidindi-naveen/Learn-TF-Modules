@@ -1,0 +1,31 @@
+VPC
+---
+IP Address -- 32 bits -- 4 octets -- 4*8=32
+
+2^32 IP Address Possible
+
+10.0.0.0/16 means the first 2 octets are fixed or 16 bits are fixed
+10.0 -- fixed, each octets range -- 0-255
+/16 -- we can create 256*256=64000 resources
+
+10.0.1.0/24
+/24 -- We can create 256 resources
+
+IGW (Internet Gateway) -- allow Internet inside Vp/-PC 
+if subnet attach route to IGW then we can call them as public subnets
+
+NAT (Network Address Translation Gateway)
+private servers cant connect to Internet or cant accept connections from Internet
+Note: we need to create NAT in public subnet & attach route to private subnet
+Enable outbount traffic only
+Disable inbound traffic 
+
+Manual Steps
+------------
+create VPC
+create IGW
+attach IGW to VPC
+create subnet 
+create route table
+create routes
+attach route table subnet
