@@ -86,3 +86,9 @@ variable "igw_tags" {
   type    = map(any)
   default = {}
 }
+
+### NAT
+variable "nat_gateway_tags" {
+  type    = map(any)
+  default = {}
+}

@@ -68,7 +68,7 @@ resource "aws_route_table" "public" {
     var.common_tags,
     var.public_route_table_tags,
     {
-        Name = "${local.resource_name}-public"
+      Name = "${local.resource_name}-public"
     }
   )
 }
@@ -80,7 +80,7 @@ resource "aws_route_table" "private" {
     var.common_tags,
     var.private_route_table_tags,
     {
-        Name = "${local.resource_name}-private"
+      Name = "${local.resource_name}-private"
     }
   )
 }
@@ -92,7 +92,27 @@ resource "aws_route_table" "database" {
     var.common_tags,
     var.database_route_table_tags,
     {
-        Name = "${local.resource_name}-database"
+      Name = "${local.resource_name}-database"
     }
   )
+}
+
+### Elastic IP
+resource "aws_eip" "this" {
+  domain = "vpc"
+}
+
+### NAT
+resource "aws_nat_gateway" "this" {
+  allocation_id = aws_eip.this.id
+  subnet_id     = aws_subnet.public[0].id
+
+  tags = merge(
+    var.common_tags,
+    var.nat_gateway_tags,
+    {
+      Name = "${local.resource_name}"
+    }
+  )
+  depends_on = [ aws_internet_gateway.this ]
 }
