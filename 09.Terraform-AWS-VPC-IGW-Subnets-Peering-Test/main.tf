@@ -1,5 +1,5 @@
 module "vpc-made-easy" {
-  source                = "../06.Terraform-AWS-VPC-IGW-Subnets"
+  source                = "../08.Terraform-AWS-VPC-IGW-Subnets-Peering"
   common_tags           = var.common_tags
   project_name          = var.project_name
   public_subnet_cidrs   = var.public_subnet_cidrs
