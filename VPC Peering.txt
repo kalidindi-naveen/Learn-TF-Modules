@@ -13,3 +13,5 @@ Note:
             - either same region of different account
             - either different region of different account
 - Routes should be added to subnets
+
+VPC peering is Optional -- based on user
