@@ -1,0 +1,53 @@
+Manual Steps
+------------
+create VPC
+create IGW
+attach IGW to VPC
+create subnet 
+create NATGW
+attach NATGW to the public subnet
+create route table
+create routes
+attach route table subnet
+
+Step1: VPC
+----------
+nk-vpc -- 10.0.0.0/16
+
+Step2 & 3: IGW 
+--------------
+nk-igw
+
+Step4: Subnet's
+--------------- 
+nk-pub-1a -- 10.0.0.0/24
+nk-pub-1b -- 10.0.1.0/24
+
+nk-pri-1a -- 10.0.10.0/24
+nk-pri-1b -- 10.0.11.0/24
+
+nk-db-1a -- 10.0.20.0/24
+nk-db-1b -- 10.0.21.0/24
+
+Step5: Create NATGW & attach to nk-pub-1a
+-----------------------------------------
+nk-nat
+
+Step6: Create Route Table's
+---------------------------
+Note:- By default, every VPC will have 1 route default table, that will be created automatically
+nk-pub-rt 
+nk-pri-rt 
+nk-db-rt
+
+Step7: Routes 
+-------------
+nk-pub-rt -- 0.0.0.0/0 to nk-igw 
+nk-pri-rt -- 0.0.0.0/0 to nk-nat
+nk-db-rt -- 0.0.0.0/0 to nk-nat
+
+Step8: Attach route table subnet
+--------------------------------
+nk-pub-1a, nk-pub-1b -- nk-pub-rt 
+nk-pri-1a, nk-pri-1b -- nk-pri-rt 
+nk-db-1a, nk-db-1a -- nk-db-rt

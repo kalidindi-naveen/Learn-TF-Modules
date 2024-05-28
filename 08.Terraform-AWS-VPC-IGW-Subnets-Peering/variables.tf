@@ -13,7 +13,7 @@ variable "common_tags" {
 
 ### VPC
 variable "cidr_block" {
-  default = "10.0.0.0/16"
+  default = "100.0.0.0/16"
   type    = string
 }
 
