@@ -10,4 +10,5 @@ module "sg-made-easy" {
   vpc_id         = data.aws_ssm_parameter.this.id
   sg_description = var.sg_description
   ingress        = var.ingress
+  common_tags = var.common_tags
 }

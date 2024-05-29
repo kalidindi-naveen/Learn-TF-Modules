@@ -40,6 +40,6 @@ variable "egress" {
 }
 
 variable "ingress" {
-  type   = list(any)
+  type    = list(any)
   default = []
 }
