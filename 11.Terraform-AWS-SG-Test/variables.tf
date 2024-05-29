@@ -44,7 +44,7 @@ variable "egress" {
 
 variable "ingress" {
   type = map(any)
-  defaul = [
+  default = [
     {
       from_port   = 0
       to_port     = 0
