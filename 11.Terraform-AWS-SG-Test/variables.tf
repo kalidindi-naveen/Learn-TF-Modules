@@ -13,10 +13,6 @@ variable "sg_name" {
   default = "allow-all"
 }
 
-variable "vpc_id" {
-  type = string
-}
-
 variable "sg_description" {
   type    = string
   default = "SG-For-Test"
