@@ -3,8 +3,7 @@ variable "project_name" {
 }
 
 variable "environment" {
-  type    = string
-  default = "dev"
+  type = string
 }
 
 variable "common_tags" {
@@ -13,8 +12,7 @@ variable "common_tags" {
 
 ### VPC
 variable "cidr_block" {
-  default = "100.0.0.0/16"
-  type    = string
+  type = string
 }
 
 variable "enable_dns_hostnames" {
