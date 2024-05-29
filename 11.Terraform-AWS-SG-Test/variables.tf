@@ -43,7 +43,7 @@ variable "egress" {
 }
 
 variable "ingress" {
-  type = map(any)
+  type = list(any)
   default = [
     {
       from_port   = 0
