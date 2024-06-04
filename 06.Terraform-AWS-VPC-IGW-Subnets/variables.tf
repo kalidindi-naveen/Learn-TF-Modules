@@ -61,6 +61,14 @@ variable "database_subnet_cidrs" {
   }
 }
 
+variable "azs" {
+  type = list(string)
+  validation {
+    condition     = length(var.azs) == 2
+    error_message = "Please Provide 2 azs Only"
+  }
+}
+
 variable "database_subnet_cidr_tags" {
   type    = map(any)
   default = {}

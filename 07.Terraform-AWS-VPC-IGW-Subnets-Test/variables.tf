@@ -23,3 +23,7 @@ variable "private_subnet_cidrs" {
 variable "database_subnet_cidrs" {
   default = ["10.0.21.0/24", "10.0.22.0/24"]
 }
+
+variable "azs" {
+  default = ["us-east-1a", "us-east-1b"]
+}
