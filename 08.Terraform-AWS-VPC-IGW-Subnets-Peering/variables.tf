@@ -79,6 +79,14 @@ variable "database_route_table_tags" {
   default = {}
 }
 
+variable "azs" {
+  type = list(string)
+  validation {
+    condition     = length(var.azs) == 2
+    error_message = "Please Provide 2 azs Only"
+  }
+}
+
 ### IGW
 variable "igw_tags" {
   type    = map(any)

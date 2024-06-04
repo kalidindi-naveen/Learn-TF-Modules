@@ -24,6 +24,10 @@ variable "database_subnet_cidrs" {
   default = ["100.0.21.0/24", "100.0.22.0/24"]
 }
 
+variable "azs" {
+  default = ["us-east-1a", "us-east-1b"]
+}
+
 variable "enable_peering" {
   default = true
 }
