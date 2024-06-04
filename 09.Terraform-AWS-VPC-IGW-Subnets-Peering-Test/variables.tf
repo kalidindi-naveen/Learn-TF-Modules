@@ -18,6 +18,10 @@ variable "common_tags" {
   }
 }
 
+variable "cidr_block" {
+  default = "10.0.0.0/16"
+}
+
 variable "public_subnet_cidrs" {
   default = ["100.0.1.0/24", "100.0.2.0/24"]
 }
